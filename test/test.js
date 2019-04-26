@@ -5,7 +5,7 @@ const md = new MarkdownIt()
 const assert = require('assert')
 const mdj = require('../')
 
-function varidate (obj) {
+function validate (obj) {
   if (obj['type'] === 'user' && obj.hasOwnProperty('id')) {
     return true
   }
@@ -20,14 +20,14 @@ function transform (state, obj) {
   state.push('user_close', 'a', -1)
 }
 
-md.use(mdj(varidate, transform))
+md.use(mdj(validate, transform))
 
 describe('simple', function() {
   it('usage', function() {
     const s = 'hello, !{"type": "user", "id": "test"}'
     assert.equal('<p>hello, <a href="/user/test">@test</a></p>\n', md.render(s))
   })
-  it('varidate', function() {
+  it('validate', function() {
     const s = 'hello, !{"type": "group", "id": "test_group"}'
     assert.equal('<p>hello, !{&quot;type&quot;: &quot;group&quot;, &quot;id&quot;: &quot;test_group&quot;}</p>\n', md.render(s))
   })

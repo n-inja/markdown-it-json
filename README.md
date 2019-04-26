@@ -7,7 +7,7 @@ add json syntax to markdown-it
 const md = require('markdown-it')
 const mdj = require('markdown-it-json')
 
-function varidate (obj) {
+function validate (obj) {
   if (obj['type'] === 'user' && obj.hasOwnProperty('id')) {
     return true
   }
@@ -22,7 +22,7 @@ function transform (state, obj) {
   state.push('user_close', 'a', -1)
 }
 
-md.use(mdj(varidate, transform)).render('hello, !{"type": "user", "id": "test"}')
+md.use(mdj(validate, transform)).render('hello, !{"type": "user", "id": "test"}')
 // '<p>hello, <a href="/user/test">@test</a></p>\n'
 ```
 
