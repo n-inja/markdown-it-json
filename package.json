@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "add json syntax to markdown-it",
   "main": "index.js",
   "scripts": {
