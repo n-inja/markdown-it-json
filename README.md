@@ -1,4 +1,4 @@
-# markdown-it-json [![Build Status](https://travis-ci.org/n-inja/markdown-it-json.svg?branch=master)](https://travis-ci.org/n-inja/markdown-it-json)
+# markdown-it-json [![Build Status](https://travis-ci.org/n-inja/markdown-it-json.svg?branch=master)](https://travis-ci.org/n-inja/markdown-it-json) [![npm version](https://badge.fury.io/js/markdown-it-json.svg)](https://badge.fury.io/js/markdown-it-json)
 add json syntax to markdown-it
 
 ## Usage
