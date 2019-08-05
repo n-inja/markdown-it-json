@@ -19,7 +19,7 @@
     "url": "https://github.com/n-inja/markdown-it-json/issues"
   },
   "devDependencies": {
-    "markdown-it": "^8.4.2",
-    "mocha": "^6.1.4"
+    "markdown-it": "^9.0.1",
+    "mocha": "^6.2.0"
   }
 }
